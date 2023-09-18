@@ -1,0 +1,57 @@
+%% Mall för att skriva motioner till Spexmöten för F-spexet
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage[swedish]{babel}
+\pagenumbering{arabic}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{fullpage}
+\usepackage{array}
+\usepackage{ifpdf}
+\usepackage{bbm}
+\usepackage{ulem}
+\ifpdf\DeclareGraphicsExtensions{.pdf,.jpg}\else\DeclareGraphicsExtensions{.eps}\fi
+
+%%%% ÄNDRA DESSA `VARIABLER''! %%%%
+\newcommand{\motionsnamn}{Glass till gamla och visa}
+\newcommand{\motionar}{Jules Vasa}
+
+%%%% Använd gärna dessa fiffiga environments %%%%
+\newenvironment{beslut}{\begin{flushleft}\textbf{Beslut:}}{\end{flushleft}}
+\newcommand{\motesdatum}{\motesdag{} \motesmanad{} \motesar{}}
+
+% %%%%
+\pagestyle{fancy}
+\headheight 35pt
+\headsep 40pt
+\addtolength{\textheight}{-4\baselineskip}
+\fancyhead[L]{Motion om \motionsnamn}
+\fancyhead[R]{{\motionar}}
+\renewcommand{\thesection}{}
+\renewcommand{\thesubsection}{\textsection\arabic{section}.\arabic{subsection}}
+
+\normalsize
+
+\begin{document}
+
+
+\begin{center}
+\textsc{\Huge Motion om}\\[0.5cm]
+\textsc{\huge \motionsnamn}\\[0.5cm]
+\textsc{\large \motionar\\}
+
+\end{center}
+
+\section{Bakgrund}
+
+Alla vettiga föreningar bör ha en dödslaser. Vi borde köpa en dödslaser.
+
+\section{Yrkande}
+\begin{description}
+	\item [att] ändra i kapitel X i stadgan/reglementet enligt följande:\\
+ § X.Y.Z Alla tillhörande spexgruppen motionärer ska av spexet få \sout{en glassbåt} \underline{obegränsat med glass}.
+\end{description}
+
+\end{document}
